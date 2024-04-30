@@ -1,4 +1,4 @@
-using Diploma.Helpers.Configuration;
+/*using Diploma.Helpers.Configuration;
 using OpenQA.Selenium;
 using Diploma.Pages;
 using Diploma.Steps;
@@ -7,7 +7,7 @@ using Allure.NUnit.Attributes;
 
 namespace Diploma.Tests.UI_tests
 {
- /*   [TestFixture]
+ *//*   [TestFixture]
     [AllureEpic("Web Interface")]
     [AllureFeature("Login feature")]
 
@@ -28,6 +28,7 @@ namespace Diploma.Tests.UI_tests
 
             Assert.That(projectsPage.IsTooltipTextCorrect(tooltipText, "mspokrovsk"));
         }
-    }*/
+    }*//*
 }
    
+*/

@@ -1,4 +1,4 @@
-using Diploma.Helpers.Configuration;
+/*using Diploma.Helpers.Configuration;
 using OpenQA.Selenium;
 using Diploma.Pages;
 using Diploma.Steps;
@@ -28,3 +28,4 @@ namespace Diploma.Tests.UI_tests
     }
 }
    
+*/

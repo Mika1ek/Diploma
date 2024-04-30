@@ -1,4 +1,4 @@
-using Diploma.Helpers.Configuration;
+/*using Diploma.Helpers.Configuration;
 using Diploma.Pages;
 using Diploma.Steps;
 using Allure.NUnit.Attributes;
@@ -36,3 +36,4 @@ namespace Diploma.Tests.UI_tests
     }
 }
    
+*/

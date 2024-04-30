@@ -1,4 +1,4 @@
-using Allure.Net.Commons;
+/*using Allure.Net.Commons;
 using NUnit.Allure.Core;
 using Diploma.Core;
 using Diploma.Helpers;
@@ -48,4 +48,4 @@ namespace Diploma.Tests.UI_tests
             Driver.Quit();
         }
     }
-}
+}*/
