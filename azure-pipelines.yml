@@ -24,4 +24,4 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: 'A.KIM\Diploma.csproj'
+    projects: 'kim\Diploma.csproj'
