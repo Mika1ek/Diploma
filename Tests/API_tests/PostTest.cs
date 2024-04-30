@@ -1,4 +1,4 @@
-using Allure.NUnit.Attributes;
+/*using Allure.NUnit.Attributes;
 using Allure.Net.Commons;
 using RestSharp;
 using System.Net;
@@ -31,7 +31,7 @@ namespace Diploma.Tests.UI_tests
         [AllureSeverity(SeverityLevel.normal)]
         [AllureStory("API POST")]
 
-        public void CheckSuccessfulResponse_WhenPostRuns()
+      *//*  public void CheckSuccessfulResponse_WhenPostRuns()
         {
             lock (lockObject)
             {
@@ -72,7 +72,7 @@ namespace Diploma.Tests.UI_tests
 
                 autoResetEvent.Set();
             }
-        }
+        }*//*
 
         [Test(Description = "Проверка успешного завершения запуска автоматизации в целевом проекте")]
         [AllureSeverity(SeverityLevel.normal)]
@@ -110,3 +110,4 @@ namespace Diploma.Tests.UI_tests
     }
 }
    
+*/

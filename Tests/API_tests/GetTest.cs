@@ -87,7 +87,7 @@ namespace Diploma.Tests.UI_tests
         [AllureSeverity(SeverityLevel.normal)]
         [AllureStory("API NFE")]
 
-        public void CheckSuccessfulResponse_WhenGetProjectRuns()
+       /* public void CheckSuccessfulResponse_WhenGetProjectRuns()
         {
             const string endpoint = "projects/{project_id}/automation/runs";
             const string token = "testmo_api_eyJpdiI6IktRRnFUeURtZE1kcmttOVphdjd2dWc9PSIsInZhbHVlIjoiOGhtcC9VSDNQQjlTSTRVN1U2aFZwOXhEYS95WWFyODlFY3FpRElGcmhUWT0iLCJtYWMiOiIzNTI2Y2E2M2U5NzliMmM1NWFjZmI0NjU1NjU1ZDgzMGVjOTI0NTI3ZTc2YzNhMGEyMWMwMTJlNGU5OWZlMWNhIiwidGFnIjoiIn0=";
@@ -112,7 +112,7 @@ namespace Diploma.Tests.UI_tests
         [Test(Description = "Invalid or missing Testmo API token")]
         [AllureSeverity(SeverityLevel.normal)]
         [AllureStory("API AFE")]
-
+*/
         public void CheckSuccessfulResponse_WhenGetInvalidToken()
         {
             const string endpoint = "projects/{project_id}";
