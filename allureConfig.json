@@ -3,7 +3,7 @@
     "directory": "allure-results",
     "links": [
       "https://jira.org/{issue}",
-      "https://mspokrovsk.testmo.net/{tms}"
+      "https://alek.testmo.net/{tms}"
     ]
   }
 }
