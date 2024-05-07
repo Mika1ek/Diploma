@@ -12,11 +12,11 @@ namespace Diploma.Pages
 
         private static By pageTitle = By.ClassName("page-title__title");
         private static By addProjectButton = By.CssSelector("[data-target='home--index.addButton']");
-        private static By hoverElement = By.CssSelector("[data-content='mspokrovsk']");
+        private static By popupElement = By.CssSelector("[data-content='Alek']");
         private static By projectDialog = By.ClassName("dialog__border");
         private static By selectFileButton = By.CssSelector("[data-action='click->doSelectAvatar']");
         private static By fileInput = By.CssSelector("[data-target='fileInput']");
-        private static By avatarJpg = By.XPath("//img[starts-with(@src,'https://Alek.testmo.net/attachments/view/')]");
+        private static By avatarPng = By.XPath("//img[starts-with(@src,'https://Alek.testmo.net/attachments/view/')]");
         private static By summary = By.CssSelector("[data-target=\"note behavior--maxlength-counter.control\"]");
         private static By projectName = By.CssSelector("[data-target='name']");
         private static By addDemoProject = By.CssSelector("[data-target='addDemoProject']");
@@ -33,7 +33,7 @@ namespace Diploma.Pages
 
         public Button AddProjectButton => new Button(Driver, addProjectButton);
 
-        public IWebElement HoverElement => WaitsHelper.WaitForExists(hoverElement);
+        public IWebElement PopupElement => WaitsHelper.WaitForExists(popupElement);
 
         public IWebElement ProjectDialog => WaitsHelper.WaitForExists(projectDialog);
 
@@ -41,7 +41,7 @@ namespace Diploma.Pages
 
         public IWebElement FileInput => WaitsHelper.WaitForExists(fileInput);
 
-        public IWebElement AvatarJpg => WaitsHelper.WaitForExists(avatarJpg);
+        public IWebElement avatarpng => WaitsHelper.WaitForExists(avatarPng);
 
         public IWebElement Summary => WaitsHelper.WaitForExists(summary);
 
@@ -91,10 +91,10 @@ namespace Diploma.Pages
         }
 
         [AllureStep("Отобразилось всплывающее сообщение")]
-        public void HoverOverHoverElement()
+        public void PopupOverPopupElement()
         {
             Actions action = new Actions(Driver);
-            action.MoveToElement(HoverElement).Perform();
+            action.MoveToElement(PopupElement).Perform();
         }
 
         public bool IsTooltipTextCorrect(string tooltipText, string expectedText)
@@ -121,14 +121,14 @@ namespace Diploma.Pages
         {
             SelectFileButton.Click();
             string assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            string filePath = Path.Combine(assemblyPath, "Resource", "Avatar.jpg");
+            string filePath = Path.Combine(assemblyPath, "Resource", "avatar.png");
             FileInput.SendKeys(filePath);
         }
 
         [AllureStep("Отображение аватара")]
         public bool AvatarUpload()
         {
-            return AvatarJpg.Displayed;
+            return avatarpng.Displayed;
         }
 
         public string GenerateRandomLetters(int length)
