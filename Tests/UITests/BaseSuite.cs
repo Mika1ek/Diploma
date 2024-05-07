@@ -1,7 +1,7 @@
-/*using Diploma.Core;
+﻿using Diploma.Core;
 using NLog;
 
-namespace Diploma.Tests.UI_tests
+namespace Diploma.Tests.UITests
 {
     [SetUpFixture]
     public class BaseSuite
@@ -15,4 +15,4 @@ namespace Diploma.Tests.UI_tests
             Logger.Info("NLog setted up.");
         }
     }
-}*/
+}

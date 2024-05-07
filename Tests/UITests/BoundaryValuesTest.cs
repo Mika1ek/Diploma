@@ -1,19 +1,17 @@
-/*using Diploma.Helpers.Configuration;
+using Diploma.Helpers.Configuration;
 using OpenQA.Selenium;
 using Diploma.Pages;
 using Diploma.Steps;
 using Allure.Net.Commons;
 using Allure.NUnit.Attributes;
 
-namespace Diploma.Tests.UI_tests
+namespace Diploma.Tests.UITests
 {
-    [AllureEpic("Web Interface")]
-    [AllureFeature("Login feature", "AddProject feature")]
-    public class ValuesTest : BaseTest
+    public class BoundaryValuesTest : BaseUITest
     {
         [Test(Description = "Проверка на граничные значения")]
+        [AllureFeature("Positive & Negative")]
         [AllureSeverity(SeverityLevel.normal)]
-        [AllureStory("Story5")]
         public void ExceedingPermissibleValuesTest()
         {
             UserSteps userSteps = new UserSteps(Driver);
@@ -27,5 +25,3 @@ namespace Diploma.Tests.UI_tests
         }
     }
 }
-   
-*/
