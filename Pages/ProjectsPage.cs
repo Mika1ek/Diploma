@@ -21,8 +21,10 @@ namespace Diploma.Pages
         private static By projectName = By.CssSelector("[data-target='name']");
         private static By addDemoProject = By.CssSelector("[data-target='addDemoProject']");
         private static By submitButton = By.CssSelector("[data-target='submitButton']");
-        private static By nameProject = By.XPath("//a[contains(@href, 'Alek.testmo.net/projects/view') and contains(text(), 'Test_Project')]");
+        private static By nameProject = By.XPath("//a[contains(@href, 'Alek.testmo.net/projects/view') and contains(text(), 'Project')]");
         private static By admin = By.CssSelector("[data-content='Admin']");
+        private static By PopupMessageBy = By.CssSelector("[class='avatar__text__identifier']");
+        private static By PopupMessageDataContextBy = By.CssSelector("[data-content='Alek']");
 
         public ProjectsPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
@@ -54,6 +56,9 @@ namespace Diploma.Pages
         public IWebElement NameProject => WaitsHelper.WaitForExists(nameProject);
 
         public Button Admin => new Button(Driver, admin);
+
+        public IWebElement PopupMessage => WaitsHelper.WaitForExists(PopupMessageBy);
+        public IWebElement PopupMessageDataContext => WaitsHelper.WaitForExists(PopupMessageDataContextBy);
 
         [AllureStep("Нажата кнопка добавления проекта")]
         public void ClickAddToProject() => AddProjectButton.Click();
@@ -91,10 +96,23 @@ namespace Diploma.Pages
         }
 
         [AllureStep("Отобразилось всплывающее сообщение")]
-        public void PopupOverPopupElement()
+        public void MoveToPopupMessage()
         {
-            Actions action = new Actions(Driver);
-            action.MoveToElement(PopupElement).Perform();
+            var allPopupMessage = WaitsHelper.WaitForAllVisibleElementsLocatedBy(PopupMessageBy); // вернёт коллекцию всех найденых на странице всплывающих сообщений
+            var actions = new Actions(Driver);
+
+            foreach (var msg in allPopupMessage) //перебор всех всплывающих сообщений
+            {
+                actions
+                    .MoveToElement(msg)
+                    .Build()
+                    .Perform();
+            }
+        }
+
+        public bool IsPopupVisible()
+        {
+            return PopupMessageDataContext.Displayed;
         }
 
         public bool IsTooltipTextCorrect(string tooltipText, string expectedText)

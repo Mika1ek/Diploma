@@ -91,10 +91,24 @@ namespace Diploma.Helpers.Configuration
                 var child = Configuration.GetSection("AppSettings");
 
                 appSettings.URL = child["URL"];
-                appSettings.URI = child["URI"];
-                appSettings.Token = child["Token"];
+                appSettings.Username = child["Username"];
+                appSettings.Password = child["Password"];
 
                 return appSettings;
+            }
+        }
+
+        public static AppSettingsApi AppSettingsApi
+        {
+            get
+            {
+                var appSettingsapi = new AppSettingsApi();
+                var child = Configuration.GetSection("AppSettings");
+
+                appSettingsapi.URI = child["URI"];
+                appSettingsapi.Token = child["Token"];
+
+                return appSettingsapi;
             }
         }
 
