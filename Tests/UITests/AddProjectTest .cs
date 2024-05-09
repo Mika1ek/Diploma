@@ -16,7 +16,6 @@ namespace Diploma.Tests.UITests
             UserSteps userSteps = new UserSteps(Driver);
             ProjectsPage projectsPage = userSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
             ProjectSteps projectSteps = new ProjectSteps(Driver);
-
             projectsPage = projectSteps.AddProject("Project");
 
             Assert.Multiple(() =>

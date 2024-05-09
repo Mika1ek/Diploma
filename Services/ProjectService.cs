@@ -7,42 +7,18 @@ namespace Diploma.Services;
 public class ProjectService : IProjectService, IDisposable
 {
     private readonly RestClientExtended _client;
-    private readonly string projectId = "50";
+    private readonly string projectId = "500";
 
     public ProjectService(RestClientExtended client)
     {
         _client = client;
     }
 
-    public HttpStatusCode GetProject(Project project)
-    {
-        var request = new RestRequest("/api/v1/projects/{project_id}")
-            .AddUrlSegment("project_id", projectId);
-
-        return _client.ExecuteAsync(request).Result.StatusCode;
-    }
-
-    public Task<Projects> GetProjects()
+    public Task<Projects> GetAllProjects()
     {
         var request = new RestRequest("/api/v1/projects");
 
-        var projects = _client.ExecuteAsync<Projects>(request);
-        return projects;
-    }
-
-    public Task<Projects> GetAllAutomationRun()
-    {
-        var request = new RestRequest("/api/v1/projects/{project_id}/automation/runs")
-            .AddUrlSegment("project_id", projectId);
         return _client.ExecuteAsync<Projects>(request);
-    }
-
-    public HttpStatusCode PostAutomationRun(AutomationRun automationRun)
-    {
-        var request = new RestRequest("/api/v1/projects/{project_id}/automation/runs", Method.Post)
-           .AddUrlSegment("project_id", projectId)
-            .AddJsonBody(automationRun);
-        return _client.ExecuteAsync(request).Result.StatusCode;
     }
 
     public Task<RestResponse> GetInvalidUser()
@@ -57,6 +33,14 @@ public class ProjectService : IProjectService, IDisposable
         return _client.ExecuteAsync(request);
     }
 
+
+    public HttpStatusCode PostAutomationRun(AutomationRun automationRun)
+    {
+        var request = new RestRequest("/api/v1/projects/{project_id}/automation/runs", Method.Post)
+           .AddUrlSegment("project_id", projectId)
+            .AddJsonBody(automationRun);
+        return _client.ExecuteAsync(request).Result.StatusCode;
+    }
     public void Dispose()
     {
         _client?.Dispose();

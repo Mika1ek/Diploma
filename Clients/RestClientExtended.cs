@@ -12,11 +12,10 @@ namespace Diploma.Clients
 
         public RestClientExtended()
         {
-          var options = new RestClientOptions(Configurator.AppSettings.URI ?? throw new InvalidOperationException());
+          var options = new RestClientOptions(Configurator.AppSettingsApi.URI ?? throw new InvalidOperationException());
           _client = new RestClient(options);
-          _client.AddDefaultHeaders(new Dictionary<string, string> { { "Authorization", $"Bearer {Configurator.AppSettings.Token}" } });
+          _client.AddDefaultHeaders(new Dictionary<string, string> { { "Authorization", $"Bearer {Configurator.AppSettingsApi.Token}" } });
 
-          Debug.Assert(Configurator.Admin != null, "Configurator.Admin != null");
         }
 
         public void Dispose()

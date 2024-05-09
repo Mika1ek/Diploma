@@ -6,10 +6,9 @@ using System.Net;
 namespace Diploma.Services;
 public interface IProjectService
 {
-    Task<Projects> GetProjects();
+    Task<Projects> GetAllProjects();
     Task<RestResponse> GetInvalidUser();
     Task<RestResponse> GetInvalidProject();
-    Task<Projects> GetAllAutomationRun();
-    HttpStatusCode GetProject(Project project);
     HttpStatusCode PostAutomationRun(AutomationRun automationRun);
+    Task<Projects> GetAllAutomationRuns(string projectId);
 }

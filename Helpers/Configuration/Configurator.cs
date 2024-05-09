@@ -91,14 +91,30 @@ namespace Diploma.Helpers.Configuration
                 var child = Configuration.GetSection("AppSettings");
 
                 appSettings.URL = child["URL"];
-                appSettings.URI = child["URI"];
-                appSettings.Token = child["Token"];
+                appSettings.Username = child["Username"];
+                appSettings.Password = child["Password"];
 
                 return appSettings;
             }
         }
 
-        public static List<User?> Users
+        public static AppSettingsApi AppSettingsApi
+        {
+            get
+            {
+                var appSettingsapi = new AppSettingsApi();
+                var child = Configuration.GetSection("AppSettings");
+
+                appSettingsapi.URI = child["URI"];
+                appSettingsapi.Token = child["Token"];
+                appSettingsapi.Username = child["Username"];
+                appSettingsapi.Password = child["Password"];
+
+                return appSettingsapi;
+            }
+        }
+
+        /*public static List<User?> Users
         {
             get
             {
@@ -125,7 +141,7 @@ namespace Diploma.Helpers.Configuration
             }
         }
 
-        public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
+        public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);*/
         public static string? BrowserType => Configuration[nameof(BrowserType)];
 
         public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)]);

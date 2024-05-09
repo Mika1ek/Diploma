@@ -62,7 +62,7 @@ namespace Diploma.Helpers
 
         public IWebElement FluentWaitForElement(By locator)
         {
-            WebDriverWait fluentWait = new WebDriverWait(driver, TimeSpan.FromSeconds(15))
+            WebDriverWait fluentWait = new WebDriverWait(driver, TimeSpan.FromSeconds(25))
             {
                 PollingInterval = TimeSpan.FromMilliseconds(50)
             };

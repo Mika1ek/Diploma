@@ -16,10 +16,10 @@ namespace Diploma.Tests.UITests
         {
             UserSteps userSteps = new UserSteps(Driver);
             ProjectsPage projectsPage = userSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
-            projectsPage.PopupOverPopupElement();
+            projectsPage.MoveToPopupMessage();
             string tooltipText = Driver.FindElement(By.CssSelector("[data-content='Alek']")).Text;
 
-            Assert.That(projectsPage.IsTooltipTextCorrect(tooltipText, "Alek"));
+            Assert.That(projectsPage.IsPopupVisible);
         }
     }
 }

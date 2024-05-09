@@ -39,7 +39,7 @@ namespace Diploma.Tests.UITests
             Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
         }
 
-       /* [TearDown]
+        [TearDown]
         public void TearDown()
         {
             try
@@ -47,12 +47,17 @@ namespace Diploma.Tests.UITests
                 if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
                 {
                     Screenshot screenshot = ((ITakesScreenshot)Driver).GetScreenshot();
-                    byte[] screenshotBytes = screenshot.AsByteArray;
-                    AllureApi.AddAttachment("Screenshot", "image/png", screenshotBytes);
+                    byte[] screenshoteBytes = screenshot.AsByteArray;
+
+                    AllureApi.AddAttachment("Screenshot", "image/png", screenshoteBytes);
                 }
             }
-            catch (Exception) { throw; }
+            catch
+            {
+                //ignore
+            }
+
             Driver.Quit();
-        }*/
+        }
     }
 }

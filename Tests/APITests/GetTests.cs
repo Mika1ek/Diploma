@@ -14,36 +14,39 @@ namespace Diploma.Tests.APITests
         [Test]
         [Category("NFE")]
         public void GetMilestoneTest()
-        {
-            Milestone milestone = new Milestone();
-            var actualMilestone = MilestoneService!.GetMilestone(milestone);
+        {  
+            var actualMilestone = MilestoneService!.GetMilestone("2");
+
             Assert.That(actualMilestone, Is.EqualTo(HttpStatusCode.OK));
         }
 
-
         [Test]
         [Category("NFE")]
-        public void GetAllProjects_test()
+        public void GetAllMilestoneTest()
         {
-            var allProjects = ProjectService!.GetProjects();
+            var result = MilestoneService!.GetAllMilestone("31");
+            _logger.Info(result);
 
             Assert.Multiple(() =>
             {
-                Assert.That(allProjects.Result.Page, Is.EqualTo(1));
-                Assert.That(allProjects.Result.Total, Is.EqualTo(5));
+                Assert.That(result.Result.Page, Is.EqualTo(1));
+                Assert.That(result.Result.PerPage, Is.EqualTo(100));
+                Assert.That(result.Result.Total, Is.EqualTo(2));
             });
         }
 
         [Test]
         [Category("NFE")]
-        public void GetAllAutomationRunsTest()
+        public void GetAllProjectsTest()
         {
-            var autoRun_project = ProjectService!.GetAllAutomationRun().Result;
+            var result = ProjectService!.GetAllProjects();
+
+            _logger.Info(result.Result);
 
             Assert.Multiple(() =>
             {
-                Assert.That(autoRun_project.Page, Is.EqualTo(1));
-                Assert.That(autoRun_project.Last_page, Is.EqualTo(1));
+                Assert.That(result.Result.Page, Is.EqualTo(1));
+                Assert.That(result.Result.Total, Is.EqualTo(43));
             });
         }
 
@@ -79,4 +82,4 @@ namespace Diploma.Tests.APITests
             AllureApi.Step("Получена ожидаемая ошибка");
         }
     }
-}
+ }

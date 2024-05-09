@@ -6,5 +6,6 @@ namespace Diploma.Services;
 
 public interface IMilestoneService
 {
-    HttpStatusCode GetMilestone(Milestone milestone);
+    Task<Milestone> GetAllMilestone(string projectId);
+    HttpStatusCode GetMilestone(string milestoneId);
 }
