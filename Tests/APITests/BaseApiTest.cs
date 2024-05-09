@@ -1,9 +1,11 @@
-﻿using Diploma.Clients;
+﻿using Allure.NUnit;
+using Diploma.Clients;
 using Diploma.Services;
 using NLog;
 
 namespace Diploma.Tests.APITests;
-
+[Parallelizable(scope: ParallelScope.Fixtures)]
+[AllureNUnit]
 public class BaseApiTest
 {
     protected ProjectService? ProjectService;
