@@ -4,7 +4,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- feature1
+- azure-pipelines
+
 
 pool: my Local Pool
 # vmImage: 'windows-latest'
@@ -13,6 +14,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Debug'
+
 
 steps:
 - task: NuGetToolInstaller@1
@@ -25,3 +27,4 @@ steps:
   inputs:
     command: 'test'
     projects: kim\Diploma.csproj
+
