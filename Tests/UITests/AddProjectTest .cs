@@ -9,7 +9,7 @@ namespace Diploma.Tests.UITests
     public class AddProjectTest : BaseUITest
     {
         [Test(Description = "Test for creating a project")]
-        [AllureFeature("Positive")]
+        [Category("Positive")]
         [AllureSeverity(SeverityLevel.normal)]
         public void TestAddProject()
         {

@@ -9,7 +9,7 @@ namespace Diploma.Tests.UITests
     public class FileUploadTest : BaseUITest
     {
         [Test(Description = "File upload test")]
-        [AllureFeature("Positive")]
+        [Category("Positive")]
         [AllureSeverity(SeverityLevel.normal)]
         public void TestFileUpload()
         {

@@ -9,8 +9,7 @@ namespace Diploma.Tests.UITests
 {
     public class BoundaryValuesTest : BaseUITest
     {
-        [Test(Description = "Проверка на граничные значения")]
-        [AllureFeature("Positive & Negative")]
+        [Test(Description = "Проверка на граничные значения")]      
         [AllureSeverity(SeverityLevel.normal)]
         public void ExceedingPermissibleValuesTest()
         {

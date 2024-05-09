@@ -9,7 +9,7 @@ namespace Diploma.Tests.UITests
     public class DialogWindowTest : BaseUITest
     {
         [Test(Description = "Проверка отображения диалогового окна")]
-        [AllureFeature("Positive")]
+        [Category("Positive")]
         [AllureSeverity(SeverityLevel.normal)]
         public void TestDialogWindow()
         {

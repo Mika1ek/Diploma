@@ -9,7 +9,7 @@ namespace Diploma.Tests.UITests
     public class LoginTest : BaseUITest
     {
         [Test(Description = "Positive test login standart user")]
-        [AllureFeature("Positive")]
+        [Category("Positive")]
         [AllureSeverity(SeverityLevel.critical)]
         
         public void SuccessfulLogin()
@@ -21,7 +21,7 @@ namespace Diploma.Tests.UITests
         }
 
         [Test(Description = "Negative test login unknown user")]
-        [AllureFeature("Negative")]
+        [Category("Negative")]
         [AllureSeverity(SeverityLevel.blocker)]
        
         public void InvalidLogin()

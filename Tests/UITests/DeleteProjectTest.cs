@@ -9,7 +9,7 @@ namespace Diploma.Tests.UITests
     public class DeleteProjectTest : BaseUITest
     {
         [Test(Description = "Test for deleting a project")]
-        [AllureFeature("Positive")]
+        [Category("Positive")]
         [AllureSeverity(SeverityLevel.normal)]
         public void TestDeleteProject()
         {

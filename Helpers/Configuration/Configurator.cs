@@ -1,4 +1,7 @@
 ﻿using System.Reflection;
+using Diploma.Models.Enums;
+using Diploma.Models;
+using Diploma.Steps;
 using Microsoft.Extensions.Configuration;
 
 namespace Diploma.Helpers.Configuration
@@ -38,13 +41,41 @@ namespace Diploma.Helpers.Configuration
                 var child = Configuration.GetSection("AppSettings");
 
                 appSettings.URL = child["URL"];
-                appSettings.Username = child["Username"];
-                appSettings.Password = child["Password"];
+                appSettings.URI = child["URI"];
+                appSettings.Token = child["Token"];
 
                 return appSettings;
             }
         }
 
+        public static List<User?> Users
+        {
+            get
+            {
+                List<User?> users = new List<User?>();
+                var child = Configuration.GetSection("Users");
+                foreach (var section in child.GetChildren())
+                {
+                    var user = new User
+                    {
+                        Password = section["Password"],
+                        Username = section["Username"]
+                    };
+                    user.UserType = section["UserType"].ToLower() switch
+                    {
+                        "admin" => UserType.Admin,
+                        "user" => UserType.Standard,
+                        _ => user.UserType
+                    };
+
+                    users.Add(user);
+                }
+
+                return users;
+            }
+        }
+
+        public static User? Admin => Users.Find(x => x?.UserType == UserType.Admin);
         public static string? BrowserType => Configuration[nameof(BrowserType)];
 
         public static double WaitsTimeout => Double.Parse(Configuration[nameof(WaitsTimeout)]);

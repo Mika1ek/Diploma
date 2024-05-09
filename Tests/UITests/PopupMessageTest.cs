@@ -10,7 +10,7 @@ namespace Diploma.Tests.UITests
     public class PopupMessageTest : BaseUITest
     {
         [Test(Description = "Test for ")]
-        [AllureFeature("Positive")]
+        [Category("Positive")]
         [AllureSeverity(SeverityLevel.normal)]
         public void PopupTest()
         {
