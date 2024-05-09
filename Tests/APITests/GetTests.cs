@@ -3,6 +3,8 @@ using Diploma.Models;
 using Newtonsoft.Json;
 using NLog;
 using System.Net;
+
+
 namespace Diploma.Tests.APITests
 {
     public class GetTests : BaseApiTest
