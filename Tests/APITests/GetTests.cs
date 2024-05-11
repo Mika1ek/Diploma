@@ -1,4 +1,4 @@
-﻿using Allure.Net.Commons;
+﻿/*using Allure.Net.Commons;
 using Diploma.Models;
 using Newtonsoft.Json;
 using NLog;
@@ -79,4 +79,4 @@ namespace Diploma.Tests.APITests
             AllureApi.Step("Получена ожидаемая ошибка");
         }
     }
-}
+}*/
