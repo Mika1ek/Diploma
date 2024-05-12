@@ -10,7 +10,7 @@ namespace Diploma.Pages
     {
         private static string END_POINT = "";
 
-        protected static readonly By pageTitle = By.ClassName("page-title__title");
+        private static readonly By pageTitle = By.ClassName("page-title__title");
         private static readonly By AddProjectButtonBy = By.CssSelector("[data-target='home--index.addButton']");
         private static readonly By ProjectDialogWindowBy = By.CssSelector("div.dialog__main__content__inner");
         private static By selectFileButton = By.CssSelector("[data-action='click->doSelectAvatar']");        
@@ -25,7 +25,7 @@ namespace Diploma.Pages
         private static By PopupMessageBy = By.CssSelector("[class='avatar__text__identifier']");
         private static By PopupMessageDataContextBy = By.CssSelector("[data-content='Alek']");
 
-        public ProjectsPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
+        public ProjectsPage(IWebDriver driver, bool openPageByUrl = false) : base(driver, openPageByUrl)
         {
 
         }

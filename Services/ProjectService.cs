@@ -33,14 +33,6 @@ public class ProjectService : IProjectService, IDisposable
         return _client.ExecuteAsync(request);
     }
 
-
-    public HttpStatusCode PostAutomationRun(AutomationRun automationRun)
-    {
-        var request = new RestRequest("/api/v1/projects/{project_id}/automation/runs", Method.Post)
-           .AddUrlSegment("project_id", projectId)
-            .AddJsonBody(automationRun);
-        return _client.ExecuteAsync(request).Result.StatusCode;
-    }
     public void Dispose()
     {
         _client?.Dispose();

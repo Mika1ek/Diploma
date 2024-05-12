@@ -151,5 +151,17 @@ namespace Diploma.Elements
         public Size Size => _webElement.Size;
 
         public bool Displayed => _webElement.Displayed;
+        public static bool IsElementPresent(IWebDriver webDriver, By locator)
+        {
+            try
+            {
+                var element = webDriver.FindElement(locator);
+                return element != null;
+            }
+            catch (NoSuchElementException)
+            {
+                return false;
+            }
+        }
     }
 }
