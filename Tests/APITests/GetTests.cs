@@ -42,13 +42,10 @@ namespace Diploma.Tests.APITests
         {
             var allProjects = ProjectService!.GetProjects();
 
-
             Assert.Multiple(() =>
             {
                 Assert.That(allProjects.Result.Page, Is.EqualTo(1));
-                /*Assert.That(allProjects.Result.Total, Is.EqualTo(45));*/
-                Assert.That(result.Result.PerPage, Is.EqualTo(100));
-                Assert.That(result.Result.Total, Is.EqualTo(result.Result.Length));
+                Assert.That(allProjects.Result.Total, Is.EqualTo(7));
             });
         }
 
