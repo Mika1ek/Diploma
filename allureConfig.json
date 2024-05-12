@@ -1,9 +1,0 @@
-{
-  "allure": {
-    "directory": "allure-results",
-    "links": [
-      "https://jira.org/{issue}",
-      "https://alek.testmo.net/{tms}"
-    ]
-  }
-}
