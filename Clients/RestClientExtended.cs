@@ -16,7 +16,6 @@ namespace Diploma.Clients
           _client = new RestClient(options);
           _client.AddDefaultHeaders(new Dictionary<string, string> { { "Authorization", $"Bearer {Configurator.AppSettingsApi.Token}" } });
 
-          /*Debug.Assert(Configurator.Admin != null, "Configurator.Admin != null");*/
         }
 
         public void Dispose()

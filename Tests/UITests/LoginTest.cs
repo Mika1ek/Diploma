@@ -17,6 +17,7 @@ namespace Diploma.Tests.UITests
             UserSteps userSteps = new UserSteps(Driver);
             ProjectsPage projectsPage = userSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
 
+            Thread.Sleep(15000);
             Assert.That(projectsPage.IsPageOpened);
         }
 

@@ -32,35 +32,23 @@ namespace Diploma.Tests.APITests
                 Assert.That(result.Result.Page, Is.EqualTo(1));
                 Assert.That(result.Result.PerPage, Is.EqualTo(100));
                 Assert.That(result.Result.Total, Is.EqualTo(2));
-                //Assert.That(result.Result.Total, Is.EqualTo(result.Result.Length));
             });
         }
 
-        /*[Test]
+        [Test]
         [Category("NFE")]
         public void GetAllProjectsTest()
         {
-            var allProjects = ProjectService!.GetProjects();
+            var result = ProjectService!.GetAllProjects();
+
+            _logger.Info(result.Result);
 
             Assert.Multiple(() =>
             {
-                Assert.That(allProjects.Result.Page, Is.EqualTo(1));
-                Assert.That(allProjects.Result.Total, Is.EqualTo(7));
+                Assert.That(result.Result.Page, Is.EqualTo(1));
+                Assert.That(result.Result.Total, Is.EqualTo(42));
             });
-        }*/
-
-        /*[Test]
-        [Category("NFE")]
-        public void GetAllAutomationRunsTest()
-        {
-            var autoRun_project = ProjectService!.GetAllAutomationRun().Result;
-
-            Assert.Multiple(() =>
-            {
-                Assert.That(autoRun_project.Page, Is.EqualTo(1));
-                Assert.That(autoRun_project.Last_page, Is.EqualTo(1));
-            });
-        }*/
+        }
 
         [Test]
         [Category("AFE")]

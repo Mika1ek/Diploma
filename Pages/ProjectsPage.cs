@@ -10,9 +10,9 @@ namespace Diploma.Pages
     {
         private static string END_POINT = "";
 
-        private static By pageTitle = By.ClassName("page-title__title");
-        private static By addProjectButton = By.CssSelector("[data-target='home--index.addButton']");
-        private static By projectDialog = By.XPath("//*[@id='projectDialog']");
+        protected static readonly By pageTitle = By.ClassName("page-title__title");
+        private static readonly By AddProjectButtonBy = By.CssSelector("[data-target='home--index.addButton']");
+        private static readonly By ProjectDialogWindowBy = By.CssSelector("div.dialog__main__content__inner");
         private static By selectFileButton = By.CssSelector("[data-action='click->doSelectAvatar']");        
         private static By avatarPng = By.XPath("//img[starts-with(@src,'https://alek.testmo.net/attachments/view')]");
         private static By fileInput = By.CssSelector("[data-target='fileInput']");
@@ -32,10 +32,10 @@ namespace Diploma.Pages
 
         public IWebElement PageTitle => WaitsHelper.WaitForExists(pageTitle);
 
-        public Button AddProjectButton => new Button(Driver, addProjectButton);
+        public Button AddProjectButton => new Button(Driver, AddProjectButtonBy);
 
 
-        public IWebElement ProjectDialog => WaitsHelper.WaitForExists(projectDialog);
+        public UIElement ProjectDialogWindow => new(Driver, ProjectDialogWindowBy);
 
         public IWebElement SelectFileButton => WaitsHelper.WaitForExists(selectFileButton);
 
@@ -129,7 +129,7 @@ namespace Diploma.Pages
         [AllureStep("Отобразилось диалоговое окно")]
         public bool DialogWindowOpened()
         {
-            return ProjectDialog.Displayed;
+            return ProjectDialogWindow.Displayed;
         }
 
         [AllureStep("Нажата кнопка добавления файла")]
