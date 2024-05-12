@@ -9,35 +9,35 @@ namespace Diploma.Pages
     {
         private static string END_POINT = "admin/projects";
 
-        private static By pageTitle = By.ClassName("page-header__title");
-        private static By delete = By.XPath("//*[@id='delete']");
-        private static By deleteProjectDialog = By.CssSelector("[data-target='title']");
-        private static By checkbox = By.CssSelector("[data-target='confirmationLabel']");
-        private static By deleteProject = By.CssSelector("[data-target='deleteButton']");
+        private static readonly By pageTitleBy = By.XPath("//h1[@class='page-title']");
+        private static readonly By DeleteButtonBy = By.CssSelector("[data-action='delete']");
+        private static readonly By deleteProjectDialogBy = By.Id("delete-project-dialog");
+        private static readonly By CheckboxDeleteBy = By.CssSelector("[data-target='confirmationLabel']");
+        private static readonly By DeleteProjectButtonBy = By.CssSelector("[data-target='deleteButton']");
 
         public AdminPage(IWebDriver driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
 
         }
 
-        public IWebElement PageTitle => WaitsHelper.WaitForExists(pageTitle);
+        public IWebElement PageTitle => WaitsHelper.WaitForExists(pageTitleBy);
 
-        public Button DeleteButton => new Button(Driver, delete);
+        public IWebElement DeleteButton => WaitsHelper.WaitForExists(DeleteButtonBy);
 
-        public IWebElement DeleteProjectDialog => WaitsHelper.WaitForExists(deleteProjectDialog);
+        public IWebElement DeleteProjectDialog => WaitsHelper.WaitForExists(deleteProjectDialogBy);
 
-        public Checkbox CheckboxSet => new Checkbox(Driver, checkbox);
+        public IWebElement CheckboxDelete => WaitsHelper.WaitForExists(CheckboxDeleteBy);
 
-        public Button DeleteProject => new Button(Driver, deleteProject);
+        public IWebElement DeleteProjectButton => WaitsHelper.WaitForExists(DeleteProjectButtonBy);
 
         [AllureStep("Нажата кнопка корзины")]
         public void ClickDeleteButton() => DeleteButton.Click();
 
         [AllureStep("Выбран чек-бокс")]
-        public void SetCheckbox(bool flag) => CheckboxSet.SetCheckbox();
+        public void SetCheckbox(bool flag) => CheckboxDelete.Click();
 
         [AllureStep("Нажата кнопка удаления проекта")]
-        public void ClickDeleteProject() => DeleteProject.Click();
+        public void ClickDeleteProject() => DeleteProjectButton.Click();
 
         protected override string GetEndpoint()
         {

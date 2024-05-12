@@ -13,12 +13,12 @@ namespace Diploma.Pages
         private static By pageTitle = By.ClassName("page-title__title");
         private static By addProjectButton = By.CssSelector("[data-target='home--index.addButton']");
         private static By projectDialog = By.XPath("//*[@id='projectDialog']");
-        private static By selectFileButton = By.CssSelector("[data-action='click->doSelectAvatar']");
+        private static By selectFileButton = By.CssSelector("[data-action='click->doSelectAvatar']");        
+        private static By avatarPng = By.XPath("//img[starts-with(@src,'https://alek.testmo.net/attachments/view')]");
         private static By fileInput = By.CssSelector("[data-target='fileInput']");
-        private static By avatarPng = By.XPath("//img[starts-with(@src,'https://Alek.testmo.net/attachments/view/')]");
         private static By summary = By.CssSelector("[data-target=\"note behavior--maxlength-counter.control\"]");
         private static By projectName = By.CssSelector("[data-target='name']");
-        private static By addDemoProject = By.CssSelector("[data-target='addDemoProject']");
+        private static By addDemoProject = By.XPath("//*[@id='addDemoProject']");
         private static By submitButton = By.CssSelector("[data-target='submitButton']");
         private static By nameProject = By.XPath("//a[contains(@href, 'alek.testmo.net/projects/view') and contains(text(), 'Project')]");
         private static By admin = By.CssSelector("[data-content='Admin']");

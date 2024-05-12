@@ -10,9 +10,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="allureConfig.json" />
     <None Remove="appsettings.json" />
-    <None Remove="Resource\Avatar.jpg" />
   </ItemGroup>
 
   <ItemGroup>

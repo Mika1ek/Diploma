@@ -39,7 +39,7 @@ namespace Diploma.Tests.UITests
             Driver.Navigate().GoToUrl(Configurator.AppSettings.URL);
         }
 
-       /* [TearDown]
+       [TearDown]
         public void TearDown()
         {
             try
@@ -53,6 +53,6 @@ namespace Diploma.Tests.UITests
             }
             catch (Exception) { throw; }
             Driver.Quit();
-        }*/
+        }
     }
 }

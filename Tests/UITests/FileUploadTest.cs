@@ -17,7 +17,8 @@ namespace Diploma.Tests.UITests
             ProjectsPage projectsPage = userSteps.SuccessfulLogin(Configurator.AppSettings.Username, Configurator.AppSettings.Password);
             projectsPage.ClickAddToProject();
             projectsPage.ClickAddFile();
-            
+            Thread.Sleep(3000);
+
             Assert.That(projectsPage.AvatarUpload);
         }
     }

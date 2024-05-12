@@ -1,4 +1,4 @@
-﻿/*using Allure.Net.Commons;
+﻿using Allure.Net.Commons;
 using Diploma.Models;
 using Newtonsoft.Json;
 using NLog;
@@ -14,27 +14,45 @@ namespace Diploma.Tests.APITests
         [Test]
         [Category("NFE")]
         public void GetMilestoneTest()
-        {
-            Milestone milestone = new Milestone();
-            var actualMilestone = MilestoneService!.GetMilestone(milestone);
+        {  
+            var actualMilestone = MilestoneService!.GetMilestone("2");
+
             Assert.That(actualMilestone, Is.EqualTo(HttpStatusCode.OK));
         }
 
-
         [Test]
         [Category("NFE")]
-        public void GetAllProjects_test()
+        public void GetAllMilestoneTest()
         {
-            var allProjects = ProjectService!.GetProjects();
+            var result = MilestoneService!.GetAllMilestone("31");
+            _logger.Info(result);
 
             Assert.Multiple(() =>
             {
-                Assert.That(allProjects.Result.Page, Is.EqualTo(1));
-                Assert.That(allProjects.Result.Total, Is.EqualTo(5));
+                Assert.That(result.Result.Page, Is.EqualTo(1));
+                Assert.That(result.Result.PerPage, Is.EqualTo(100));
+                Assert.That(result.Result.Total, Is.EqualTo(2));
+                //Assert.That(result.Result.Total, Is.EqualTo(result.Result.Length));
             });
         }
 
         [Test]
+        [Category("NFE")]
+        public void GetAllProjectsTest()
+        {
+            var allProjects = ProjectService!.GetProjects();
+
+
+            Assert.Multiple(() =>
+            {
+                Assert.That(allProjects.Result.Page, Is.EqualTo(1));
+                /*Assert.That(allProjects.Result.Total, Is.EqualTo(45));*/
+                Assert.That(result.Result.PerPage, Is.EqualTo(100));
+                Assert.That(result.Result.Total, Is.EqualTo(result.Result.Length));
+            });
+        }
+
+        /*[Test]
         [Category("NFE")]
         public void GetAllAutomationRunsTest()
         {
@@ -45,7 +63,7 @@ namespace Diploma.Tests.APITests
                 Assert.That(autoRun_project.Page, Is.EqualTo(1));
                 Assert.That(autoRun_project.Last_page, Is.EqualTo(1));
             });
-        }
+        }*/
 
         [Test]
         [Category("AFE")]
@@ -79,4 +97,4 @@ namespace Diploma.Tests.APITests
             AllureApi.Step("Получена ожидаемая ошибка");
         }
     }
-}*/
+ }

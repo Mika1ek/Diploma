@@ -19,9 +19,10 @@ namespace Diploma.Tests.UITests
             projectsPage = projectSteps.AddProject("Delete");
             projectsPage = projectSteps.DeleteProject(true);
 
+            Thread.Sleep(10000);
             Assert.Multiple(() =>
             {
-                Assert.That(projectsPage.IsPageOpened());
+                Assert.That(projectsPage.IsPageOpened());             
                 Assert.That(projectsPage.IsNameProjectAbsent("Delete"));
             });
         }
