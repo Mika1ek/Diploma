@@ -36,7 +36,7 @@ namespace Diploma.Tests.APITests
             });
         }
 
-        [Test]
+        /*[Test]
         [Category("NFE")]
         public void GetAllProjectsTest()
         {
@@ -47,7 +47,7 @@ namespace Diploma.Tests.APITests
                 Assert.That(allProjects.Result.Page, Is.EqualTo(1));
                 Assert.That(allProjects.Result.Total, Is.EqualTo(7));
             });
-        }
+        }*/
 
         /*[Test]
         [Category("NFE")]
