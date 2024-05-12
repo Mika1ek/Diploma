@@ -29,6 +29,7 @@ public class MilestoneService : IMilestoneService, IDisposable
 
         return _client.ExecuteAsync<Milestone>(request);
     }
+
     public void Dispose()
     {
         _client?.Dispose();
