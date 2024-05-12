@@ -10,8 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove=".github\**" />
     <Compile Remove="bin\**" />
+    <EmbeddedResource Remove=".github\**" />
     <EmbeddedResource Remove="bin\**" />
+    <None Remove=".github\**" />
     <None Remove="bin\**" />
   </ItemGroup>
 

@@ -7,9 +7,7 @@ on:
     branches: [ "feature1" ]
 
 jobs:
-
   test:
-
     strategy:
       matrix:
         configuration: [Debug]
@@ -48,7 +46,7 @@ jobs:
       with:
         gh_pages: gh-pages
         allure_history: allure-history
-        allure_results: Diploma\bin\Debug\net8.0
+        allure_results: ./Diploma/bin/Debug/net8.0/allure-results
 
     - name: Publish test report
       uses: peaceiris/actions-gh-pages@v3
@@ -59,5 +57,5 @@ jobs:
         publish_dir: allure-history
 
     # Execute all unit tests in the solution
-    - name: Run tests
+    - name: Run test
       run: dotnet test
