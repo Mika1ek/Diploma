@@ -10,11 +10,7 @@ namespace Diploma.Pages
     {
         private static string END_POINT = "";
 
-<<<<<<< HEAD
-        private static readonly By pageTitle = By.ClassName("page-title__title");
-=======
-        protected static readonly By pageTitle = By.ClassName("page-title__title");
->>>>>>> 6e2de829f21eda351d41e7431fe996f12ed481d1
+        private static By pageTitle = By.ClassName("page-title__title");
         private static readonly By AddProjectButtonBy = By.CssSelector("[data-target='home--index.addButton']");
         private static readonly By ProjectDialogWindowBy = By.CssSelector("div.dialog__main__content__inner");
         private static By selectFileButton = By.CssSelector("[data-action='click->doSelectAvatar']");        
