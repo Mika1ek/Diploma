@@ -29,7 +29,7 @@ namespace Diploma.Tests.UITests
             LoginPage loginPage = userSteps.IncorrectLogin("123@gmail.com", Configurator.AppSettings.Password);
             ProjectsPage projectsPage = new ProjectsPage(Driver);
 
-            Thread.Sleep(15000);
+            //Thread.Sleep(25000);
             Assert.That(projectsPage.IsPageOpened);
         }
     }
