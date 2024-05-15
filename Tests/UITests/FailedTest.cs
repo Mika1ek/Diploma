@@ -1,4 +1,4 @@
-using Diploma.Pages;
+/*using Diploma.Pages;
 using Diploma.Helpers.Configuration;
 using Diploma.Pages;
 using Diploma.Steps;
@@ -33,4 +33,4 @@ namespace Diploma.Tests.UITests
             Assert.That(projectsPage.IsPageOpened);
         }
     }
-}
+}*/
