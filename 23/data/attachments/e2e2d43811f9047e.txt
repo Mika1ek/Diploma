@@ -1,0 +1,2 @@
+2024-05-17 09:06:57.5094|ERROR|Diploma.Clients.RestClientExtended|Error retrieving response. Check inner details for more info. 
+Request failed with status code NotFound

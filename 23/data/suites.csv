@@ -1,0 +1,21 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri May 17 09:06:38 GMT 2024","Fri May 17 09:06:56 GMT 2024","17781","","","","LoginTest","SuccessfulLogin","SuccessfulLogin","Positive test login standart user
+"
+"passed","Fri May 17 09:06:20 GMT 2024","Fri May 17 09:06:33 GMT 2024","12836","","","","DialogWindowTest","TestDialogWindow","TestDialogWindow","Проверка отображения диалогового окна
+"
+"passed","Fri May 17 09:06:56 GMT 2024","Fri May 17 09:06:57 GMT 2024","395","","","","GetTests","GetAllMilestoneTest","GetAllMilestoneTest",""
+"passed","Fri May 17 09:06:20 GMT 2024","Fri May 17 09:06:33 GMT 2024","13034","","","","BoundaryValuesTest","ExceedingPermissibleValuesTest","ExceedingPermissibleValuesTest","Проверка на граничные значения
+"
+"passed","Fri May 17 09:06:20 GMT 2024","Fri May 17 09:06:38 GMT 2024","18107","","","","DeleteProjectTest","TestDeleteProject","TestDeleteProject","Test for deleting a project
+"
+"passed","Fri May 17 09:06:57 GMT 2024","Fri May 17 09:06:57 GMT 2024","88","","","","GetTests","GetIncorrectProject","GetIncorrectProject",""
+"passed","Fri May 17 09:06:33 GMT 2024","Fri May 17 09:06:52 GMT 2024","18671","","","","FileUploadTest","TestFileUpload","TestFileUpload","File upload test
+"
+"passed","Fri May 17 09:06:57 GMT 2024","Fri May 17 09:06:57 GMT 2024","102","","","","GetTests","GetIncorrectUser","GetIncorrectUser",""
+"broken","Fri May 17 09:06:33 GMT 2024","Fri May 17 09:06:56 GMT 2024","23218","","","","PopupMessageTest","PopupTest","PopupTest","Test for 
+"
+"passed","Fri May 17 09:06:37 GMT 2024","Fri May 17 09:06:40 GMT 2024","2392","","","","LoginTest","InvalidLogin","InvalidLogin","Negative test login unknown user
+"
+"passed","Fri May 17 09:06:20 GMT 2024","Fri May 17 09:06:37 GMT 2024","17130","","","","AddProjectTest","TestAddProject","TestAddProject","Test for creating a project
+"
+"passed","Fri May 17 09:06:57 GMT 2024","Fri May 17 09:06:57 GMT 2024","97","","","","GetTests","GetMilestoneTest","GetMilestoneTest",""
