@@ -1,0 +1,24 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Fri May 17 23:03:32 GMT 2024","Fri May 17 23:03:34 GMT 2024","1304","","","","AddProjectTest","TestAddProject","TestAddProject","Test for creating a project
+"
+"broken","Fri May 17 23:03:34 GMT 2024","Fri May 17 23:03:34 GMT 2024","303","","","","PopupMessageTest","PopupTest","PopupTest","Test for 
+"
+"broken","Fri May 17 23:03:34 GMT 2024","Fri May 17 23:03:34 GMT 2024","305","","","","FileUploadTest","TestFileUpload","TestFileUpload","File upload test
+"
+"broken","Fri May 17 23:03:34 GMT 2024","Fri May 17 23:03:34 GMT 2024","221","","","","FailedTest","FailedLoginTest","FailedLoginTest","Тест имитирует дефект и должен упасть
+"
+"passed","Fri May 17 23:03:35 GMT 2024","Fri May 17 23:03:35 GMT 2024","62","","","","GetTests","GetMilestoneTest","GetMilestoneTest",""
+"broken","Fri May 17 23:03:32 GMT 2024","Fri May 17 23:03:34 GMT 2024","1301","","","","BoundaryValuesTest","ExceedingPermissibleValuesTest","ExceedingPermissibleValuesTest","Проверка на граничные значения
+"
+"failed","Fri May 17 23:03:35 GMT 2024","Fri May 17 23:03:35 GMT 2024","86","","","","GetTests","GetAllProjectsTest","GetAllProjectsTest",""
+"passed","Fri May 17 23:03:35 GMT 2024","Fri May 17 23:03:35 GMT 2024","76","","","","GetTests","GetIncorrectProject","GetIncorrectProject",""
+"passed","Fri May 17 23:03:34 GMT 2024","Fri May 17 23:03:35 GMT 2024","401","","","","GetTests","GetAllMilestoneTest","GetAllMilestoneTest",""
+"broken","Fri May 17 23:03:32 GMT 2024","Fri May 17 23:03:34 GMT 2024","1304","","","","DialogWindowTest","TestDialogWindow","TestDialogWindow","Проверка отображения диалогового окна
+"
+"passed","Fri May 17 23:03:35 GMT 2024","Fri May 17 23:03:35 GMT 2024","65","","","","GetTests","GetIncorrectUser","GetIncorrectUser",""
+"broken","Fri May 17 23:03:32 GMT 2024","Fri May 17 23:03:34 GMT 2024","1304","","","","DeleteProjectTest","TestDeleteProject","TestDeleteProject","Test for deleting a project
+"
+"broken","Fri May 17 23:03:34 GMT 2024","Fri May 17 23:03:34 GMT 2024","355","","","","LoginTest","InvalidLogin","InvalidLogin","Negative test login unknown user
+"
+"broken","Fri May 17 23:03:34 GMT 2024","Fri May 17 23:03:34 GMT 2024","346","","","","LoginTest","SuccessfulLogin","SuccessfulLogin","Positive test login standart user
+"

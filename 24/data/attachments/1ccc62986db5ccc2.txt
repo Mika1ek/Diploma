@@ -1,0 +1,1 @@
+2024-05-17 23:03:34.8761|INFO|Diploma.Tests.APITests.GetTests|System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[Diploma.Models.Milestone,Diploma.Clients.RestClientExtended+<ExecuteAsync>d__7`1[Diploma.Models.Milestone]]
