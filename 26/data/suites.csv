@@ -1,0 +1,24 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Sat May 18 08:04:31 GMT 2024","Sat May 18 08:04:31 GMT 2024","342","","","","FailedTest","FailedLoginTest","FailedLoginTest","Тест имитирует дефект и должен упасть
+"
+"broken","Sat May 18 08:04:30 GMT 2024","Sat May 18 08:04:31 GMT 2024","1145","","","","AddProjectTest","TestAddProject","TestAddProject","Test for creating a project
+"
+"passed","Sat May 18 08:04:32 GMT 2024","Sat May 18 08:04:32 GMT 2024","109","","","","GetTests","GetIncorrectProject","GetIncorrectProject",""
+"broken","Sat May 18 08:04:30 GMT 2024","Sat May 18 08:04:31 GMT 2024","1142","","","","DeleteProjectTest","TestDeleteProject","TestDeleteProject","Test for deleting a project
+"
+"broken","Sat May 18 08:04:31 GMT 2024","Sat May 18 08:04:31 GMT 2024","353","","","","PopupMessageTest","PopupTest","PopupTest","Test for Popup message
+"
+"passed","Sat May 18 08:04:31 GMT 2024","Sat May 18 08:04:32 GMT 2024","506","","","","GetTests","GetAllMilestoneTest","GetAllMilestoneTest",""
+"broken","Sat May 18 08:04:31 GMT 2024","Sat May 18 08:04:31 GMT 2024","298","","","","FileUploadTest","TestFileUpload","TestFileUpload","File upload test
+"
+"broken","Sat May 18 08:04:31 GMT 2024","Sat May 18 08:04:31 GMT 2024","356","","","","LoginTest","InvalidLogin","InvalidLogin","Negative test login unknown user
+"
+"broken","Sat May 18 08:04:30 GMT 2024","Sat May 18 08:04:31 GMT 2024","1145","","","","DialogWindowTest","TestDialogWindow","TestDialogWindow","Проверка отображения диалогового окна
+"
+"passed","Sat May 18 08:04:32 GMT 2024","Sat May 18 08:04:32 GMT 2024","92","","","","GetTests","GetMilestoneTest","GetMilestoneTest",""
+"broken","Sat May 18 08:04:31 GMT 2024","Sat May 18 08:04:31 GMT 2024","213","","","","LoginTest","SuccessfulLogin","SuccessfulLogin","Positive test login standart user
+"
+"broken","Sat May 18 08:04:30 GMT 2024","Sat May 18 08:04:31 GMT 2024","1145","","","","BoundaryValuesTest","ExceedingPermissibleValuesTest","ExceedingPermissibleValuesTest","Проверка на граничные значения
+"
+"passed","Sat May 18 08:04:32 GMT 2024","Sat May 18 08:04:32 GMT 2024","89","","","","GetTests","GetIncorrectUser","GetIncorrectUser",""
+"passed","Sat May 18 08:04:32 GMT 2024","Sat May 18 08:04:32 GMT 2024","130","","","","GetTests","GetAllProjectsTest","GetAllProjectsTest",""
