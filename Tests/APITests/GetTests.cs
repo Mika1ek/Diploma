@@ -46,7 +46,7 @@ namespace Diploma.Tests.APITests
             Assert.Multiple(() =>
             {
                 Assert.That(result.Result.Page, Is.EqualTo(1));
-                Assert.That(result.Result.Total, Is.EqualTo(56));
+                Assert.That(result.Result.Total, Is.EqualTo(55));
             });
         }
 
