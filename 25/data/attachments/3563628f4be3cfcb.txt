@@ -1,0 +1,1 @@
+2024-05-18 07:58:36.1376|INFO|Diploma.Tests.APITests.GetTests|Projects { Page = 1, Prev_page = , Next_page = , Last_page = 1, Per_page = 100, Total = 55, Result = Diploma.Models.Project[] }

@@ -1,0 +1,24 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat May 18 07:58:35 GMT 2024","Sat May 18 07:58:36 GMT 2024","475","","","","GetTests","GetAllMilestoneTest","GetAllMilestoneTest",""
+"passed","Sat May 18 07:58:36 GMT 2024","Sat May 18 07:58:36 GMT 2024","72","","","","GetTests","GetIncorrectUser","GetIncorrectUser",""
+"broken","Sat May 18 07:58:35 GMT 2024","Sat May 18 07:58:35 GMT 2024","275","","","","PopupMessageTest","PopupTest","PopupTest","Test for 
+"
+"broken","Sat May 18 07:58:33 GMT 2024","Sat May 18 07:58:35 GMT 2024","1901","","","","BoundaryValuesTest","ExceedingPermissibleValuesTest","ExceedingPermissibleValuesTest","Проверка на граничные значения
+"
+"broken","Sat May 18 07:58:33 GMT 2024","Sat May 18 07:58:35 GMT 2024","1901","","","","DeleteProjectTest","TestDeleteProject","TestDeleteProject","Test for deleting a project
+"
+"broken","Sat May 18 07:58:35 GMT 2024","Sat May 18 07:58:35 GMT 2024","254","","","","FailedTest","FailedLoginTest","FailedLoginTest","Тест имитирует дефект и должен упасть
+"
+"broken","Sat May 18 07:58:35 GMT 2024","Sat May 18 07:58:35 GMT 2024","395","","","","LoginTest","InvalidLogin","InvalidLogin","Negative test login unknown user
+"
+"passed","Sat May 18 07:58:36 GMT 2024","Sat May 18 07:58:36 GMT 2024","74","","","","GetTests","GetIncorrectProject","GetIncorrectProject",""
+"broken","Sat May 18 07:58:35 GMT 2024","Sat May 18 07:58:35 GMT 2024","232","","","","LoginTest","SuccessfulLogin","SuccessfulLogin","Positive test login standart user
+"
+"broken","Sat May 18 07:58:35 GMT 2024","Sat May 18 07:58:35 GMT 2024","316","","","","FileUploadTest","TestFileUpload","TestFileUpload","File upload test
+"
+"broken","Sat May 18 07:58:33 GMT 2024","Sat May 18 07:58:35 GMT 2024","1898","","","","DialogWindowTest","TestDialogWindow","TestDialogWindow","Проверка отображения диалогового окна
+"
+"broken","Sat May 18 07:58:33 GMT 2024","Sat May 18 07:58:35 GMT 2024","1901","","","","AddProjectTest","TestAddProject","TestAddProject","Test for creating a project
+"
+"passed","Sat May 18 07:58:36 GMT 2024","Sat May 18 07:58:36 GMT 2024","105","","","","GetTests","GetAllProjectsTest","GetAllProjectsTest",""
+"passed","Sat May 18 07:58:36 GMT 2024","Sat May 18 07:58:36 GMT 2024","101","","","","GetTests","GetMilestoneTest","GetMilestoneTest",""
